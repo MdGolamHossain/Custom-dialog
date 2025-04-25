@@ -1,0 +1,60 @@
+private void AlertMessage() {
+
+
+
+        Dialog dialog = new Dialog(FirstActivity.this);
+
+        dialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.WHITE));
+        dialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+        dialog.setContentView(R.layout.item_alert);
+        WindowManager.LayoutParams lp = new WindowManager.LayoutParams();
+        lp.copyFrom(dialog.getWindow().getAttributes());
+        lp.width = WindowManager.LayoutParams.MATCH_PARENT;
+        lp.height = WindowManager.LayoutParams.WRAP_CONTENT;
+        lp.gravity = Gravity.CENTER;
+        dialog.getWindow().setAttributes(lp);
+        /*
+        Button btnYes = dialog.findViewById(R.id.btnOk1);
+        btnYes.setOnClickListener(v -> {
+
+            finish();
+        });
+
+        Button btnNo = dialog.findViewById(R.id.btnCancel1);
+        btnNo.setOnClickListener(v -> {
+            dialog.dismiss();
+        });
+
+         */
+
+        dialog.show();
+    }
+
+
+item_alert xml
+
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:layout_margin="24dp"
+    app:cardCornerRadius="16dp"
+    app:cardElevation="8dp">
+
+    <ImageView
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        android:src="@drawable/match"
+        android:scaleType="centerCrop"
+
+        android:contentDescription="Alert Image"
+        />
+
+
+
+
+
+
+</androidx.cardview.widget.CardView>
